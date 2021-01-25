@@ -1,0 +1,14 @@
+{
+  "name": "directive",
+  "version": "1.0.0",
+  "description": "指令",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "指令"
+  ],
+  "author": "daiend",
+  "license": "ISC"
+}

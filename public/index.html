@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./vrital/bundle.js"></script>
 </head>
 <body>
-    <script src="/vritual/bundle.js"></script>
+    <div id="app">
+        daiend:{{daiend}}
+        <button onclick="daiendChange()">daiend  change -->>console.log</button>
+        <br />
+        {{a.b.c}}
+        <button onclick="add()">点我加一</button>
+        <br />
+        {{inpValue}}
+        <br />
+        <input type="text" v-model="inpValue" />
+        <ul class="test">
+            <li>123</li>
+            <li>456</li>
+            <li>789</li>
+        </ul>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                daiend:6666,
+                inpValue:11111,
+                a:{
+                    b:{
+                        c:9
+                    }
+                }
+            },
+            watch:{
+                daiend(val){
+                    console.log('daiend  change',val)
+                }
+            }
+        })
+        function daiendChange(){
+            vm.daiend++
+        }
+        function add(){
+            vm.a.b.c++ 
+            vm.inpValue++
+        }
+        // console.log(vm)
+    </script>
 </body>
 </html>
